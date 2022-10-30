@@ -1,0 +1,147 @@
+#items{
+    padding: 100px 20px 100px 20px;
+}
+.items-tags{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: rgb(169, 169, 169);
+    font-weight: 400;
+    border-bottom: 3px solid rgb(243, 243, 243);
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+.items-tags div{
+    display: flex;
+}
+.tags-1gp{
+    width: 25%;
+    justify-content: space-around;
+}
+.tags-2gp{
+    justify-content: space-around;
+    width: 40%;
+}
+.item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(243, 243, 243);
+    padding: 20px 0;
+}
+.item img{
+    width: 100%;
+}
+.wrapper1-item{
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+}
+.item-foto{
+    width: 40%;
+    border: 2px solid rgb(243, 243, 243);
+}
+.wrapper-in-1wrapper-item{
+    width: 60%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+.item-title a{
+    color: black;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+.item-articul{
+    font-size: 14px;
+    color: rgb(169, 169, 169);
+}
+.wrapper2-item{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    align-items: center;
+    font-size: 18px;
+}
+.wrapper2-item div{
+    height: fit-content;
+    font-weight: 425;
+}
+.item-delete{
+    cursor: pointer;
+}
+.items-price{
+    display: flex;
+    justify-content: flex-end;
+}
+.items-price div{
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+.wrapper-items-price{
+    width: 30%;
+}
+.price-tag{
+    font-size: 17px;
+}
+.common-price{
+    font-weight: 500;
+    font-size: 18px;
+    color: rgb(255, 158, 40);
+    width: 40%;
+}
+.category-name{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+.category-name-t1{
+    font-size: 60px;
+    letter-spacing: 5px;
+}
+.category-name-t2{
+    color: rgb(169, 169, 169);
+    font-size: 25px;
+}
+.order-form{
+    width: 100%;
+}
+.form-inputs{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-inputs div{
+    color: black;
+    font-size: 20px;
+}
+.form-inputs input{
+    padding: 20px;
+    border: 1px solid  rgb(169, 169, 169);
+    outline: none;
+    width: 400px;
+}
+.form-button{
+    text-align: center;
+}
+.form-button button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(220, 156, 38);
+    border: 1px solid rgb(255, 184, 184);
+    color: white;
+    cursor: pointer;
+}
+.form-inputs-title{
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+#err-order{
+    color: red;
+}

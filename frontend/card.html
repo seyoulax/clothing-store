@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:ital,wght@1,300&family=Open+Sans:wght@400;500&family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/header-footer-style.css">
+    <link rel="stylesheet" href="css/card-style.css">
+
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="main-wrapper-header">
+                <div class="logo_categories">
+                    <div class="logo">
+                        <a href="welcome-page.html"><img src="img/icons/logo.jpg"></a>
+                    </div>
+                    <div class="categories">
+                        <div class="category">
+                            <a href="catalog.html?category_id=1" class="category-link">Женщинам</a>
+                        </div>
+                        <div class="category">
+                            <a href="catalog.html?category_id=2" class="category-link">Мужчинам</a>
+                        </div>
+                        <div class="category">
+                            <a href="catalog.html?category_id=3" class="category-link">Детям</a>
+                        </div>
+                        <div class="category">
+                            <a href="catalog.html?is_new=1" class="category-link">Новинки</a>
+                        </div>
+                        <div class="category">
+                            <a href="catalog.html?is_best=1" class="category-link">Лучшие товары</a>
+                        </div>
+                        <div class="category">
+                            <a href="#" class="category-link">О нас</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="log_bascet">
+                    <div class="log, main">
+                        <div class="log_bascet_img">
+                            <img src="img/icons/account.png">
+                        </div>
+                        <div class="log_basket-link">
+                            <a href="signIn.html" class="log-link">Войти</a>
+                        </div>
+                    </div>
+                    <div class="bascet, main">
+                        <div class="log_bascet_img">
+                            <img src="img/icons/bascet.png">
+                        </div>
+                        <div class="log_basket-link">
+                            <a class='bascet-link' href='cart.html'>корзина(<span id='cart-count'></span>)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id='item'>            
+                
+            </div>
+        </main>
+        <footer>
+            <div id="wrapper-footer">
+                <div class="footer-collections"> 
+                    <div class="footer-block-title">
+                        <span>КОЛЛЕКЦИИ</span>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="catalog.html?category_id=1"><span>Женщинам(<b id="category_1"></b>)</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="catalog.html?category_id=2"><span>Мужчинам(<b id="category_2"></b>)</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="catalog.html?category_id=3"><span>Детям(<b id="category_3"></b>)</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="catalog.html?is_new=1"><span>Новинки(<b id="category_4"></b>)</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="catalog.html?is_best=1"><span>Лучшие товары(<b id="category_5"></b>)</span></a>
+                    </div>
+                </div>
+                <div class="footer-shop">
+                    <div class="footer-block-title">
+                        <span>МАГАЗИН</span>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="#"><span>О нас</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="#"><span>Доставка</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="#"><span>Работай с нами</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="#"><span>Контакты</span></a>
+                    </div>
+                </div>
+                <div class="footer-contacts">
+                    <div class="footer-block-title">
+                        <span>МЫ В СОЦИАЛЬНЫХ СЕТЯХ</span>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="https://inordic.ru"><span>Сайт разработчика inordic.ru</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <span style="color: rgb(169, 169, 169); font-size:18px">2018 	&#174; Все права защищены</span>
+                    </div>
+                    <div class="footer-block-medias">
+                        <a href="#"><div class="footer-block-media-twitter">
+
+                        </div></a>
+                        <a href="#"><div class="footer-block-media-facebook">
+
+                        </div></a>
+                        <a href="#"><div class="footer-block-media-instagram">
+
+                        </div></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </footer>
+    </div>
+    <template id="item-tmpl">
+        <div class="item" id='${id}'>
+            <div class="item-foto">
+                <img src="${photo}">
+            </div>
+            <div class="item-title">
+                <span><b>${title}</b></span>
+            </div>
+            <div class="item-articul">
+                <span>Артикул: ${articul}</span>
+            </div>
+            <div class="item-price">
+                <span>${price} руб.</span>
+            </div>
+            <div class="item-desc">
+                <p>${description}</p>
+            </div>
+            <div style="color:red; font-size: 14px; display: none;" class="size-error">
+                <span>выберите размер</span>
+            </div>
+            <div class="sizes-box" >
+
+            </div>
+            <div class="item-buttonadd">
+                <button onclick='addToBasket()'>Добавить в корзину</button>
+            </div>
+        </div>
+    </template>
+    <template id="size-tmpl">
+        <div onclick="chooseSize()" class="size-block" size="${size}">
+            ${size}
+        </div>
+    </template>
+    <script>
+        issetToken();
+        countOnLoad();
+        insertCountGoods();
+        console.log(GET("id"))
+        let datajson = requestToData('http://localhost:8090/app/get?id=' + GET('id'));
+        let data = JSON.parse(datajson);
+        let sizes = JSON.parse(data[0].sizes);
+        console.log(sizes[1])
+        let fields = ['photo','price', 'articul', 'description', 'title', 'id'];
+        let itemsbox = document.getElementById("item");
+        let tmpl = document.getElementById('item-tmpl').innerHTML;
+        let item = replaceData(tmpl, data[0], fields)
+        itemsbox.innerHTML+=item;   
+        let tmplsize = document.getElementById('size-tmpl').innerHTML;
+        let sizesbox = document.querySelector(".sizes-box");
+        for(let i = 0; i< sizes.length; i++){
+            let size = replaceAll(tmplsize, "${size}", sizes[i]);
+            sizesbox.innerHTML+=size;
+        }
+        function chooseSize(){
+            let g = 0;
+            if(document.querySelector("#grey") != null){
+
+                document.querySelector("#grey").style.background="rgb(243, 243, 243)";
+                document.querySelector("#grey").id = "";
+            }
+            let itemsize = event.target.getAttribute('size');
+            event.target.id="grey";
+            document.querySelector("#grey").style.background="rgb(169, 169, 169)";
+            let item_id = event.target.closest(".item").id;
+            let sizeData = {
+                            itemid: item_id,
+                            size: itemsize
+                        }
+            let checksize = localStorage.getItem("sizes");
+            console.log(checksize)
+            if(checksize == null || checksize == 'undefined'){
+                checksize = [];
+                checksize.push(sizeData);
+            }
+            
+            else{
+                checksize = JSON.parse(checksize);
+                for(let i = 0; i < checksize.length; i++){
+                    if(checksize[i].itemid == sizeData.itemid){
+
+                        checksize[i].size = sizeData.size;
+                        g = 1;
+                    }
+                }
+
+            }
+            console.log(g)
+            if (g == 0){
+                checksize.push(sizeData);
+            }
+            console.log(checksize);
+            localStorage.setItem("sizes", JSON.stringify(checksize));
+        }
+        function addToBasket(){
+            //opredellit id iz get parametra
+            let size = "";
+            let id = event.target.closest('.item').id;
+            let sizesjson = localStorage.getItem('sizes');
+            let sizes = JSON.parse(sizesjson);
+            console.log(sizes)
+            for(let i = 0;i < sizes.length; i++){
+                if(sizes[i].itemid == id){
+                    size = sizes[i];
+                }
+            }
+            console.log(size)
+            if(document.querySelector('.size-error').style.display == 'block'){
+                document.querySelector('.size-error').style.display = 'none';
+            }
+            if(size == ""){
+                document.querySelector('.size-error').style.display = 'block';
+            }
+            else{
+                for(let i = 0;i < sizes.length; i++){
+                    if(sizes[i].itemid == id){
+                        sizes.splice(i, 1);
+                    }
+                }
+                console.log(sizes);
+                localStorage.setItem('sizes', JSON.stringify(sizes));
+                if(document.querySelector("#grey") != null){
+
+                    document.querySelector("#grey").style.background="rgb(243, 243, 243)";
+                    document.querySelector("#grey").id = "";
+                }
+                //smotrim pusta li korzina v localstorage
+                    let cart = localStorage.getItem('cart')
+                    console.log("polchili" + cart);
+                    if(cart == 'undefined' || cart == null){
+                        //esli pusta to sozdaem ee v vide pustogo massiva
+                        cart = [];
+                        console.log('tam nichego ne bylo')
+                    }
+                    else{
+                        cart = JSON.parse(cart);
+                        console.log('tam bylo' + cart);
+                    }
+                //dobavlyem id v massiv
+                    cart.push(size);
+                //schitaem kolvo tovara
+                let count = cart.length
+                document.getElementById('cart-count').innerHTML = count;
+                //codim v json i soxranyaem v localstorage
+                    cart = JSON.stringify(cart);
+                    console.log('soxranilos' + cart)
+                    localStorage.setItem('cart', cart);
+            }
+        }
+       
+    </script>
+</body>
+</html>

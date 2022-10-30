@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(230, 230, 230);
+    zoom: 85%;
+    height:100vh;
+
+}
+
+#wrapper{
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: 'Roboto Mono', monospace;
+}
+.wrapper-form-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.form-wrapper{
+    background-color: rgb(243, 243, 243);
+    padding: 10px;
+    border: 2px solid rgb(169, 169, 169); 
+    width: 300px;
+    margin-top: 15px;
+}
+.form-wrapper div{
+    padding-bottom: 5px;
+}
+.form-err{
+    color: rgb(255, 0, 0);
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+}
+.form-wrapper input{
+    padding: 10px 20px;
+    border: 2px solid rgb(169, 169, 169);
+    width: 250px;
+}
+.form-button{
+    text-align: center;
+}
+.form-href{
+    text-align: center;
+    color: grey;
+}
+.log-tag{
+    text-align: center;
+}
+.form-wrapper button{
+    padding: 10px 20px;
+    width: max-content;
+    background-color: rgb(220, 156, 38);
+    border: 2px solid rgb(0, 0, 0);
+    cursor: pointer;
+}

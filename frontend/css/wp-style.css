@@ -1,0 +1,135 @@
+.novently{
+    width: 100%;
+    margin: 100px 0 0 0;
+}
+.novently-text-t1{
+    font-size: 70px;
+    letter-spacing: 5px;
+}
+.novently-text-t2{
+    font-size: 25px;
+    color: rgb(169, 169, 169);
+}
+.novently-text div{
+    text-align: center;
+}
+.novently-button{
+    display: flex;
+    justify-content: center;
+    margin: 70px 0 60px 0;
+}
+.novently-button button{
+    border: 2px solid black;
+    padding: 15px 20px 15px 20px;
+    background-color: white;
+    transition: all 1s;
+}
+.novently-button button:hover{
+    background-color: rgb(184, 116, 116);
+    border-color:  rgb(184, 116, 116);
+    color: white;
+    cursor: pointer;
+}
+.catalog-news{
+    margin: 0 20px;
+    display: flex;
+}
+.catalog-news i{
+    font-size: 18px;
+}
+.catalog_1_post{
+    width: 25%;
+}
+.catalog_1_post div{
+    background-position: center center;
+    background-size: cover;
+}
+.catalog_2_post{
+    width: 25%;
+}
+.catalog_2_post div{
+    background-position: center center;
+    background-size: cover;
+}
+.catalog_3_post{
+    width: 25%;
+}
+.catalog_3_post div{
+    background-position: center center;
+    background-size: cover;
+}
+.catalog_4_post{
+    width: 25%;
+}
+.catalog_4_post div{
+    background-position: center center;
+    background-size: cover;
+}
+.longcard{
+    height: 730px;
+    width: 365px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.card-texts {
+    width: fit-content;
+    text-align: center;
+    font-size: 22px;
+}
+.shortcard{
+    height: 365px;
+    width: 365px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.card-specific-sign{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+.card-specific-sign img{
+    width: 40px;
+    margin: 0 10px 0 10px
+}
+.spec1{
+    width: 50px;
+}
+
+.mailing{
+    margin: 300px 20px 300px 20px;
+}
+.mailing-texts{
+    text-align: center;
+    padding-bottom: 80px;
+}
+.mailing-texts-t1{
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+.mailing-texts-t2{
+    font-size: 20px;
+    color: rgb(169, 169, 169);
+}
+.mailing-form{
+    display: flex;
+    justify-content: center;
+}
+.mailing-form-input{
+    padding: 20px;
+    border: 1px solid  rgb(169, 169, 169);
+    outline: none;
+    width: 400px;
+
+}
+.mailing-form-button{
+    padding: 20px;
+    background-color: rgb(220, 156, 38);
+    border: 1px solid rgb(255, 184, 184);
+    color: white;
+    cursor: pointer;
+}

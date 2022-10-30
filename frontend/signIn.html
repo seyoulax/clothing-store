@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@400;500&family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/log-style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div>
+            <div class="log-tag">
+                <h1>ВХОД</h1>
+            </div>
+            <div class="form-err">
+
+            </div>
+            <div class="wrapper-form-wrapper">
+                <div class="form-wrapper">
+                    <div>
+                        <input type="text" name="Логин" id="login" placeholder="Логин/Почта">
+                    </div>
+                    <div>
+                        <input type="password" name="Pass" id="password" placeholder="Пароль">
+                    </div>
+                    
+                    <div class="form-button">
+                        <button type="submit" onclick="SignIn()">Войти</button>
+                    </div>
+                    <div class="form-href">
+                        <span>Ещё нет аккаунта?<a href="registration.html">зарегистрируйтесь</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function SignIn() {
+        let loginU = document.getElementById("login").value;
+        let passU = document.getElementById("password").value;
+        document.getElementById("login").style.backgroundColor = "white";
+        document.getElementById("password").style.backgroundColor = "white";
+        let countErr = 0
+        if(loginU == ""){
+            document.getElementById("login").style.backgroundColor = "rgb(255, 64, 64)";
+            document.querySelector(".form-err").innerHTML = "заполните все поля";
+            countErr+=1
+        }; 
+        if(passU == ""){
+            document.getElementById("password").style.backgroundColor = "rgb(255, 64, 64)";
+            document.querySelector(".form-err").innerHTML = "заполните все поля";
+            countErr+=1
+        }; 
+        if(countErr != 0){
+            
+        }
+        else{
+            let data = {
+                Login: loginU,
+                Pass: passU, 
+            }
+            let jsonData = JSON.stringify(data);
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", 'http://localhost:8090/app/signin' ,false);
+            xhr.send(jsonData);
+            console.log(xhr.responseText)
+            let responseData = JSON.parse(xhr.responseText);
+            console.log(responseData.status)
+            document.getElementById("login").style.backgroundColor = "white";
+            document.getElementById("password").style.backgroundColor = "white";
+            if(responseData.status == true) {
+                //записываем куку 
+                document.cookie = "user_id=" + responseData.token;
+                window.location.href = "http://localhost:8080/welcome-page.html"
+            }
+            if(responseData.status == false){
+                document.querySelector(".form-err").innerHTML = "пользователя с таким логином/почтой или паролем не существует, попробуйте еще раз или зарегистрируйте аккаунт"
+            }
+            console.log(document.cookie)
+        }
+    }
+</script>
+</html>

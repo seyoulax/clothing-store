@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:ital,wght@1,300&family=Open+Sans:wght@400;500&family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/header-footer-style.css">
+    <link rel="stylesheet" href="css/user_acc-style.css">
+    <link rel="stylesheet" href="css/cart-style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="main-wrapper-header">
+                <div class="logo_categories">
+                    <div class="logo">
+                        <a href="welcome-page.html"><img src="img/icons/logo.jpg"></a>
+                    </div>
+                    <div class="categories">
+                        <div class="category">
+                            <a href="catalog.html?category_id=1" class="category-link">Женщинам</a>
+                        </div>
+                        <div class="category">
+                            <a href="catalog.html?category_id=2" class="category-link">Мужчинам</a>
+                        </div>
+                        <div class="category">
+                            <a href="catalog.html?category_id=3" class="category-link">Детям</a>
+                        </div>
+                        <div class="category">
+                            <a href="catalog.html?is_new=1" class="category-link">Новинки</a>
+                        </div>
+                        <div class="category">
+                            <a href="catalog.html?is_best=1" class="category-link">Лучшие товары</a>
+                        </div>
+                        <div class="category">
+                            <a href="#" class="category-link">О нас</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="log_bascet">
+                    <div class="log, main">
+                        <div class="log_bascet_img">
+                            <img src="img/icons/account.png">
+                        </div>
+                        <div class="log_basket-link">
+                            <a href="signIn.html.html" class="log-link">Войти</a>
+                        </div>
+                    </div>
+                    <div class="bascet, main">
+                        <div class="log_bascet_img">
+                            <img src="img/icons/bascet.png">
+                        </div>
+                        <div class="log_basket-link">
+                            <a class='bascet-link' href='cart.html'>корзина(<span id='cart-count'></span>)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="main-wrapper">
+                <div class="acc-title">
+                    <span class="span-acc-title"></span>
+                </div>
+                <div class="acc-orders">
+                    <div class="orders-tag-title">
+                        <span>Ваши заказы</span>
+                    </div>
+                    <div class="orders-box">
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="wrapper-footer">
+                <div class="footer-collections"> 
+                    <div class="footer-block-title">
+                        <span>КОЛЛЕКЦИИ</span>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="catalog.html?category_id=1"><span>Женщинам(<b id="category_1"></b>)</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="catalog.html?category_id=2"><span>Мужчинам(<b id="category_2"></b>)</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="catalog.html?category_id=3"><span>Детям(<b id="category_3"></b>)</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="catalog.html?is_new=1"><span>Новинки(<b id="category_4"></b>)</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="catalog.html?is_best=1"><span>Лучшие товары(<b id="category_5"></b>)</span></a>
+                    </div>
+                </div>
+                <div class="footer-shop">
+                    <div class="footer-block-title">
+                        <span>МАГАЗИН</span>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="#"><span>О нас</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="#"><span>Доставка</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="#"><span>Работай с нами</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="#"><span>Контакты</span></a>
+                    </div>
+                </div>
+                <div class="footer-contacts">
+                    <div class="footer-block-title">
+                        <span>МЫ В СОЦИАЛЬНЫХ СЕТЯХ</span>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="https://inordic.ru"><span>Сайт разработчика inordic.ru</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <span style="color: rgb(169, 169, 169); font-size:18px">2018 	&#174; Все права защищены</span>
+                    </div>
+                    <div class="footer-block-medias">
+                        <a href="#"><div class="footer-block-media-twitter">
+
+                        </div></a>
+                        <a href="#"><div class="footer-block-media-facebook">
+
+                        </div></a>
+                        <a href="#"><div class="footer-block-media-instagram">
+
+                        </div></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </footer>
+    </div>
+    <template id="order-tmpl">
+        <div class="order-wrapper" id="order_${Id}">
+            <div class="order-info">
+                <div class="order-info-title">Информация о заказе:</div>
+                <div class="order-number"><span>номер заказа: ${Id}</span></div>
+                <div class="order-adress"><span>адрес доставки: ${Adress}</span></div>
+            </div>
+            <div class="order-goods">
+                <div class="order-goods-title">
+                    Товары в заказе
+                </div>
+                <div class="cart-wrapper">
+                    <div class="items-tags">
+                        <div class="tags-1gp">
+                            <div class="item-tag">
+                                ФОТО
+                            </div>
+                            <div class="item-tag">
+                                НАИМЕНОВАНИЕ
+                            </div>
+                        </div>
+                        <div class="tags-2gp">
+                            <div class="item-tag">
+                                РАЗМЕР
+                            </div>
+                            <div class="item-tag">
+                                СТОИМОСТЬ
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items-box">
+
+                    </div>
+                    <div class="items-price">
+                        <div class="wrapper-items-price">
+                            <div class="price-tag">
+                                Итого:
+                            </div>
+                            <div class="common-price">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="item-tmpl">
+        <div class="item" id='${id}'>
+            <div class="wrapper1-item">
+                <div class="item-foto">
+                    <img src="${photo}">
+                </div>
+                <div class="wrapper-in-1wrapper-item">
+                    <div class="item-title">
+                        <a href="card.html?id=${id}"><h1>${title}</h1></a>
+                    </div>
+                    <div class="item-articul">
+                        <span>арт. ${articul}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper2-item">
+                <div class="item-size">
+                    ${size}
+                </div>
+                <div class="item-price">
+                    <span>${price} руб.</span>
+                </div>
+            </div>
+        </div>
+    </template>
+<script>
+    issetToken();
+    countOnLoad();
+    insertCountGoods();
+    let token = document.cookie.replace(/(?:(?:^|.*;\s*)user_id\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+    let ordersbox = document.querySelector(".orders-box");
+    if(token != ""){
+        if(document.cookie.replace(/(?:(?:^|.*;\s*)token_correct\s*\=\s*([^;]*).*$)|^.*$/, "$1") == "true"){
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", "http://localhost:8090/app/get_orders", false);
+            xhr.send(JSON.stringify(token))
+            let ordersArray = JSON.parse(xhr.responseText)
+            //получаем все товары
+            let datajson = requestToData('http://localhost:8090/app/get');
+            let data = JSON.parse(datajson);
+            //_
+            let orderTmpl = document.getElementById('order-tmpl').innerHTML;
+            let fields = ['photo', 'title', 'articul', 'price', 'id'];
+            let fieldsOrder = ['Id', 'Id', 'Adress']
+            let itemTmpl = document.getElementById('item-tmpl').innerHTML;
+            if(ordersArray == ""){
+                ordersbox.innerHTML = `<span>пока что вы ничего не заказывали(</span>
+                                        <a href="catalog.html>сделайте первый заказ</a>`
+                ordersbox.style.textAlign = "center";
+            }
+            else{
+                ordersbox.style.textAlign = "";
+                for(let u = 0; u < ordersArray.length; u++){
+                    let goods = JSON.parse(ordersArray[u].Goods);
+                    for(let v = 0; v < 1; v++){
+                        let order = replaceData(orderTmpl, ordersArray[u], fieldsOrder);
+                        ordersbox.innerHTML+=order;
+                    }
+                    let orderI = document.getElementById(`order_${ordersArray[u].Id}`);
+                    calculatePrice(orderI, goods);
+                    let itemsbox = orderI.querySelector(".items-box");
+                    for(let i = 0; i < goods.length; i++){
+                        let item = replaceData(itemTmpl, data[[goods[i]['itemid']]-1], fields)
+                        item = item.replace('${size}', goods[i]['size']);
+                        itemsbox.innerHTML+=item;   
+                    }
+                }
+                function calculatePrice(elem, goods){
+                    let commonprice = 0;
+                    for(let y = 0; y < goods.length; y++){
+                        commonprice += data[[goods[y]['itemid']]-1].price;
+                    }
+                    elem.querySelector('.common-price').innerHTML = commonprice + " руб.";
+                }
+            }
+            document.querySelector(".span-acc-title").innerHTML = `Привет <i>${document.cookie.replace(/(?:(?:^|.*;\s*)user_name\s*\=\s*([^;]*).*$)|^.*$/, "$1")}</i>`;
+        }
+        else{
+            alert("incorrect token")
+        }
+    }
+    else{
+        document.querySelector(".span-acc-title").innerHTML = "УУпс, кажется вы <i>не зарегистрировны(</i>"
+        ordersbox.innerHTML = `<div><span>пока что вы ничего не заказывали(</span><a href="catalog.html>сделайте первый заказ</a></div>`
+        ordersbox.style.textAlign = "center";
+                         
+    }
+</script>
+</body>
+</html>

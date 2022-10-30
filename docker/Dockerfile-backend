@@ -1,0 +1,13 @@
+FROM ubuntu:latest
+#скачиваем обновление
+RUN apt-get update 
+#копируем файла с компа внутрь нашего файла
+COPY ./certs/ /etc/ssl/certs/
+
+RUN apt-get update --fix-missing
+
+RUN apt-get install golang -y
+
+#запускаем команду когда докер уже поднят
+CMD cd /app && go run api.go
+

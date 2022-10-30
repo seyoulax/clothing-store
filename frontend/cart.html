@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:ital,wght@1,300&family=Open+Sans:wght@400;500&family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/header-footer-style.css">
+    <link rel="stylesheet" href="css/cart-style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="main-wrapper-header">
+                <div class="logo_categories">
+                    <div class="logo">
+                        <a href="welcome-page.html"><img src="img/icons/logo.jpg"></a>
+                    </div>
+                    <div class="categories">
+                        <div class="category">
+                            <a href="catalog.html?category_id=1" class="category-link">Женщинам</a>
+                        </div>
+                        <div class="category">
+                            <a href="catalog.html?category_id=2" class="category-link">Мужчинам</a>
+                        </div>
+                        <div class="category">
+                            <a href="catalog.html?category_id=3" class="category-link">Детям</a>
+                        </div>
+                        <div class="category">
+                            <a href="catalog.html?is_new=1" class="category-link">Новинки</a>
+                        </div>
+                        <div class="category">
+                            <a href="catalog.html?is_best=1" class="category-link">Лучшие товары</a>
+                        </div>
+                        <div class="category">
+                            <a href="#" class="category-link">О нас</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="log_bascet">
+                    <div class="log, main">
+                        <div class="log_bascet_img">
+                            <img src="img/icons/account.png">
+                        </div>
+                        <div class="log_basket-link">
+                            <a href="signIn.html.html" class="log-link">Войти</a>
+                        </div>
+                    </div>
+                    <div class="bascet, main">
+                        <div class="log_bascet_img">
+                            <img src="img/icons/bascet.png">
+                        </div>
+                        <div class="log_basket-link">
+                            <a class='bascet-link' href='cart.html'>корзина(<span id='cart-count'></span>)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="category-name">
+                <div class="category-name-t1">
+                    <span>ВАША КОРЗИНА</span>
+                </div>
+                <div class="category-name-t2">
+                    <span><i>Товары резервируются на некоторое время</i></span>
+                </div>
+            </div>
+            <div id='items'>            
+                <div class="items-tags">
+                    <div class="tags-1gp">
+                        <div class="item-tag">
+                            ФОТО
+                        </div>
+                        <div class="item-tag">
+                            НАИМЕНОВАНИЕ
+                        </div>
+                    </div>
+                    <div class="tags-2gp">
+                        <div class="item-tag">
+                            РАЗМЕР
+                        </div>
+                        <div class="item-tag">
+                            СТОИМОСТЬ
+                        </div>
+                        <div class="item-tag">
+                            УДАЛИТЬ
+                        </div>
+                    </div>
+                </div>
+                <div class="items-box">
+
+                </div>
+                <div class="items-price">
+                    <div class="wrapper-items-price">
+                        <div class="price-tag">
+                            Итого:
+                        </div>
+                        <div class="common-price">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="order-form">
+                <div class="form-inputs">
+                    <div>
+                        <h3 id="err-order"></h3>
+                    </div>
+                    <div>
+                        <div class="form-inputs-title">
+                            Адресс
+                        </div>
+                        <input type="text" placeholder="г.Москва" id="adress">
+                    </div>
+                </div>
+                <div class="form-button">
+                    <div>
+                        <button onclick="sentOrder()" type="button" >Заказать</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="wrapper-footer">
+                <div class="footer-collections"> 
+                    <div class="footer-block-title">
+                        <span>КОЛЛЕКЦИИ</span>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="catalog.html?category_id=1"><span>Женщинам(<b id="category_1"></b>)</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="catalog.html?category_id=2"><span>Мужчинам(<b id="category_2"></b>)</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="catalog.html?category_id=3"><span>Детям(<b id="category_3"></b>)</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="catalog.html?is_new=1"><span>Новинки(<b id="category_4"></b>)</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="catalog.html?is_best=1"><span>Лучшие товары(<b id="category_5"></b>)</span></a>
+                    </div>
+                </div>
+                <div class="footer-shop">
+                    <div class="footer-block-title">
+                        <span>МАГАЗИН</span>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="#"><span>О нас</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="#"><span>Доставка</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="#"><span>Работай с нами</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="#"><span>Контакты</span></a>
+                    </div>
+                </div>
+                <div class="footer-contacts">
+                    <div class="footer-block-title">
+                        <span>МЫ В СОЦИАЛЬНЫХ СЕТЯХ</span>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="https://inordic.ru"><span>Сайт разработчика inordic.ru</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <span style="color: rgb(169, 169, 169); font-size:18px">2018 	&#174; Все права защищены</span>
+                    </div>
+                    <div class="footer-block-medias">
+                        <a href="#"><div class="footer-block-media-twitter">
+
+                        </div></a>
+                        <a href="#"><div class="footer-block-media-facebook">
+
+                        </div></a>
+                        <a href="#"><div class="footer-block-media-instagram">
+
+                        </div></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </footer>
+    </div>
+    <template id="item-tmpl">
+        <div class="item" id='${id}'>
+            <div class="wrapper1-item">
+                <div class="item-foto">
+                    <img src="${photo}">
+                </div>
+                <div class="wrapper-in-1wrapper-item">
+                    <div class="item-title">
+                        <a href="card.html?id=${id}"><h1>${title}</h1></a>
+                    </div>
+                    <div class="item-articul">
+                        <span>арт. ${articul}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper2-item">
+                <div class="item-size">
+                    ${size}
+                </div>
+                <div class="item-price">
+                    <span>${price} руб.</span>
+                </div>
+                <div class='item-delete' onclick="deleteFromCart()">
+                    X
+                </div>
+            </div>
+        </div>
+    </template>
+<script>
+    issetToken();
+    countOnLoad();
+    insertCountGoods();
+    function sentOrder(){
+        let token = document.cookie.replace(/(?:(?:^|.*;\s*)user_id\s*\=\s*([^;]*).*$)|^.*$/, "$1")
+        if(token != ""){
+            let resultToken = document.cookie.replace(/(?:(?:^|.*;\s*)token_correct\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+            if(resultToken == "true"){
+                let cartData = localStorage.getItem("cart");
+
+                if(cartData == "" || cartData == 'undefined' || cartData == null){
+                    document.getElementById("err-order").innerHTML = "Ваша корзина пуста, добавте в неё " + `<a href="welcome-page.html">товары</a>`
+                }
+                else{
+                    let adress = document.getElementById("adress").value;
+                    let data = {
+                        Token: token,
+                        Adress: adress,
+                        Goods: cartData
+                    };
+                    let xhr = new XMLHttpRequest();
+                    xhr.open("POST", "http://localhost:8090/app/order", false);
+                    xhr.send(JSON.stringify(data))
+                    localStorage.setItem('cart', 'undefined');
+                    document.getElementById("err-order").innerHTML = "Поздравляем!, ваш заказ в обработке, что бы его посмотреть, перейдите в " + `<a href="user_acc.html">ваш профиль</a>`
+                }
+            }
+        }
+        else{
+            document.getElementById("err-order").innerHTML = "Войдите или зарегистрируйтесь чтобы сделать заказ"
+        }
+    }
+    let datajson = requestToData('http://localhost:8090/app/get');
+    let data = JSON.parse(datajson);
+    console.log(data)
+    let fields = ['photo', 'title', 'articul', 'price', 'id'];
+    let itemsbox = document.querySelector(".items-box");
+    let tmpl = document.getElementById('item-tmpl').innerHTML;
+    let cart = localStorage.getItem('cart')
+    if(cart == 'undefined' || cart == null){
+        cart = [];
+    }
+    else{
+        cart = JSON.parse(cart);
+    }
+    calculatePrice();
+    for(let i = 0; i < cart.length; i++){
+        let item = replaceData(tmpl, data[[cart[i]['itemid']]-1], fields)
+        item = item.replace('${size}', cart[i]['size']);
+        itemsbox.innerHTML+=item;   
+    }
+    function calculatePrice(){
+        let commonprice = 0;
+        for(let y = 0; y < cart.length; y++){
+            commonprice += data[[cart[y]['itemid']]-1].price;
+        }
+        document.querySelector('.common-price').innerHTML=commonprice + " руб.";
+    }
+    function deleteFromCart(){
+        //poluchaem id tovara na kotoryi clicknuli
+        let id = event.target.closest('.item').id;
+        //udalyaem iz localstorage
+        for(i in cart){
+            if(cart[i]['itemid'] == id){
+                cart.splice(i, 1);
+                break;
+            }
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+       
+        //udalyem tovariz verstki
+        event.target.closest('.item').remove();
+
+        countOnLoad();
+        calculatePrice();
+    }
+
+    
+</script>
+</body>
+</html>

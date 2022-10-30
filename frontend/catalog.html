@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@400;500&family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/header-footer-style.css">
+    <link rel="stylesheet" href="css/man-catalog-style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="main-wrapper-header">
+                <div class="logo_categories">
+                    <div class="logo">
+                        <a href="welcome-page.html"><img src="img/icons/logo.jpg"></a>
+                    </div>
+                    <div class="categories">
+                        <div class="category">
+                            <a href="catalog.html?category_id=1" class="category-link">Женщинам</a>
+                        </div>
+                        <div class="category">
+                            <a href="catalog.html?category_id=2" class="category-link">Мужчинам</a>
+                        </div>
+                        <div class="category">
+                            <a href="catalog.html?category_id=3" class="category-link">Детям</a>
+                        </div>
+                        <div class="category">
+                            <a href="catalog.html?is_new=1" class="category-link">Новинки</a>
+                        </div>
+                        <div class="category">
+                            <a href="catalog.html?is_best=1" class="category-link">Лучшие товары</a>
+                        </div>
+                        <div class="category">
+                            <a href="#" class="category-link">О нас</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="log_bascet">
+                    <div class="log, main">
+                        <div class="log_bascet_img">
+                            <img src="img/icons/account.png">
+                        </div>
+                        <div class="log_basket-link">
+                            <a href="signIn.html" class="log-link">Войти</a>
+                        </div>
+                    </div>
+                    <div class="bascet, main">
+                        <div class="log_bascet_img">
+                            <img src="img/icons/bascet.png">
+                        </div>
+                        <div class="log_basket-link">
+                            <a class='bascet-link' href='cart.html'>корзина(<span id='cart-count'></span>)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="main-wrapper">
+                <div class="category-name">
+                    <div class="category-name-t1">
+                        <span>МУЖЧИНАМ</span>
+                    </div>
+                    <div class="category-name-t2">
+                        <span><i>Все товары</i></span>
+                    </div>
+                </div>
+                <div class='items'>            
+                    <div class="items-container">
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="wrapper-footer">
+                <div class="footer-collections"> 
+                    <div class="footer-block-title">
+                        <span>КОЛЛЕКЦИИ</span>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="catalog.html?category_id=1"><span>Женщинам(<b id="category_1"></b>)</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="catalog.html?category_id=2"><span>Мужчинам(<b id="category_2"></b>)</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="catalog.html?category_id=3"><span>Детям(<b id="category_3"></b>)</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="catalog.html?is_new=1"><span>Новинки(<b id="category_4"></b>)</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="catalog.html?is_best=1"><span>Лучшие товары(<b id="category_5"></b>)</span></a>
+                    </div>
+                </div>
+                <div class="footer-shop">
+                    <div class="footer-block-title">
+                        <span>МАГАЗИН</span>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="#"><span>О наc</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="#"><span>Доставка</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="#"><span>Работай с нами</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="#"><span>Контакты</span></a>
+                    </div>
+                </div>
+                <div class="footer-contacts">
+                    <div class="footer-block-title">
+                        <span>МЫ В СОЦИАЛЬНЫХ СЕТЯХ</span>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <a href="https://inordic.ru"><span>Сайт разработчика inordic.ru</span></a>
+                    </div>
+                    <div class="footer-block-subtitle">
+                        <span style="color: rgb(169, 169, 169); font-size:18px">2018 	&#174; Все права защищены</span>
+                    </div>
+                    <div class="footer-block-medias">
+                        <a href="#"><div class="footer-block-media-twitter">
+
+                        </div></a>
+                        <a href="#"><div class="footer-block-media-facebook">
+
+                        </div></a>
+                        <a href="#"><div class="footer-block-media-instagram">
+
+                        </div></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <template id="item-tmpl">
+        <div class="item" id='${id}' data-id="">
+            <div class="item-foto" style="background-image: url('${photo}')">
+                
+            </div>
+            <div class="item-title">
+                <a href="card.html?id=${id}"><b></spa>${title}</b></a>
+            </div>
+            <div class="item-price">
+                <span>${price} руб.</span>
+            </div>
+        </div>
+    </template>
+<script>
+    issetToken();
+    countOnLoad();
+    insertCountGoods();
+    let baseurl = 'http://localhost:8090/app/get?';
+    if(GET("category_id")){
+        baseurl += "category_id=" + GET('category_id') + "&";
+    }
+    if(GET("is_new")){
+        baseurl += "is_new=" + GET('is_new') + "&";
+    }
+    if(GET("is_best")){
+        baseurl += "is_best=" + GET('is_best') + "&";
+    }
+    console.log(baseurl)
+    let datajson = requestToData(baseurl);
+    let category = "";
+    if(GET('category_id') == 2){
+        category = "Мужчинам"
+    }
+    if(GET('category_id')   == 1){
+        category = "Женщинам"
+    }
+    if(GET('category_id')  == 3){
+        category = "Детям"
+    }
+    if(GET('is_new')  == 1){
+        category = "Новинки"
+    }
+    if(GET('is_best')  == 1){
+        category = "Ваши любимые товары"
+    }
+    console.log(category)
+    document.querySelector('.category-name-t1 span').innerHTML = category;
+    let data = JSON.parse(datajson);
+    let fields = ['photo', "price", 'title', 'id'];
+    let itemsbox = document.querySelector(".items-container");
+    let tmpl = document.getElementById('item-tmpl').innerHTML;
+    for(let i = 0; i < data.length; i++){
+        let item = replaceData(tmpl, data[i], fields)
+        itemsbox.innerHTML+=item;   
+        if((i + 1) % 4 == 0){
+            console.log(data[i].id)
+            document.getElementById(`${data[i].id}`).style.marginRight = "0";
+        }
+    } 
+</script>
+</body>
+</html>

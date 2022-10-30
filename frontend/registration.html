@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@400;500&family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/log-style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div>
+            <div class="log-tag">
+                <h1>РЕГИСТРАЦИЯ</h1>
+            </div>
+            <div class="form-err">
+
+            </div>
+            <div class="wrapper-form-wrapper">
+                <div class="form-wrapper">
+                    <div>
+                        <input type="text" required="required" id="login" placeholder="Логин">
+                    </div>
+                    <div>
+                        <input type="email" required="required" id="email" placeholder="Почта">
+                    </div>
+                    <div>
+                        <input type="password" required="required" id="password" placeholder="Пароль">
+                    </div>
+                    <div class="form-button">
+                        <button type="submit" onclick="register()">Зарегистрироваться</button>
+                    </div>
+                    <div class="form-href">
+                        <span>Уже есть аккаунта?<a href="signIn.html">войдите</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function register() {
+        let loginU = document.getElementById("login").value;
+        let emailU = document.getElementById("email").value;
+        let passU = document.getElementById("password").value;
+        document.getElementById("login").style.backgroundColor = "white";
+        document.getElementById("email").style.backgroundColor = "white";
+        document.getElementById("password").style.backgroundColor = "white";
+        let countErr = 0
+        if(loginU == ""){
+            document.getElementById("login").style.backgroundColor = "rgb(255, 64, 64)";
+            document.querySelector(".form-err").innerHTML = "заполните все поля";
+            countErr+=1
+        }; 
+        if(emailU == ""){
+            document.getElementById("email").style.backgroundColor = "rgb(255, 64, 64)";
+            document.querySelector(".form-err").innerHTML = "заполните все поля";
+            countErr+=1
+        }; 
+        if(passU == ""){
+            document.getElementById("password").style.backgroundColor = "rgb(255, 64, 64)";
+            document.querySelector(".form-err").innerHTML = "заполните все поля";
+            countErr+=1
+        }; 
+        if(countErr != 0){
+            
+        }
+        else{
+            let data = {
+            Login : loginU,
+            Email: emailU,
+            Pass: passU, 
+            }
+            let jsonData = JSON.stringify(data);
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", 'http://localhost:8090/app/registration' ,false);
+            xhr.send(jsonData);
+            console.log(xhr.responseText)
+            let responseData = JSON.parse(xhr.responseText);
+            console.log(responseData.status)
+            document.getElementById("login").style.backgroundColor = "white";
+            document.getElementById("email").style.backgroundColor = "white";
+            document.getElementById("password").style.backgroundColor = "white";
+            if(responseData.status == true) {
+                //записываем куку 
+                document.cookie = "user_id=" + responseData.token;
+                window.location.href = "http://localhost:8080/welcome-page.html"
+                document.querySelector(".form-err").innerHTML = "";
+            }
+            if(responseData.status == false){
+                document.querySelector(".form-err").innerHTML = "пользователь с таким логином или почтой уже есть, попробуйте еще раз или войдите в аккаунт"
+            }
+            console.log(document.cookie)
+        }
+    }
+</script>
+</html>

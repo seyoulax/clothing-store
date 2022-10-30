@@ -1,0 +1,42 @@
+.orders-tag-title, .acc-title{
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+}
+.acc-title{
+    font-size: 40px;
+    font-weight: 500;
+}
+.acc-title i{
+    color: rgb(255, 158, 40);
+}
+.acc-orders{
+    margin-bottom: 100px;
+}
+.orders-tag-title{
+    font-size: 25px;
+}
+.order-wrapper{
+    margin: 20px;
+    margin-bottom: 50px;
+    border: 3px rgb(243, 243, 243) solid;
+    border-radius: 5%;
+    box-sizing: border-box;
+    padding: 20px
+}
+.order-info div{
+    margin: 5px 0;
+}
+.order-info-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+.order-goods-title{
+    margin: 10px 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+a{
+    display: block;
+}
