@@ -223,7 +223,7 @@
     if(token != ""){
         if(document.cookie.replace(/(?:(?:^|.*;\s*)token_correct\s*\=\s*([^;]*).*$)|^.*$/, "$1") == "true"){
             let xhr = new XMLHttpRequest();
-            xhr.open("POST", "http://localhost:8090/app/get_orders", false);
+            xhr.open("POST", `${location.protocol}//${location.hostname}:8090/app/get_orders`, false);
             xhr.send(JSON.stringify(token))
             let ordersArray = JSON.parse(xhr.responseText)
             //получаем все товары

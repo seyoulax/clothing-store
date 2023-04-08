@@ -91,7 +91,7 @@ function issetToken(){
         }
         else{
             document.querySelector(".log_basket-link").innerHTML = `<a href="signIn.html" class="log-link">Войти</a></span>`
-            alert("fuck you")
+            alert("no token")
             document.cookie = "token_correct=" + "";
             document.cookie = "user_id=" + "";
             document.cookie = "user_name=" + "";  

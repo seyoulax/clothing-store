@@ -47,7 +47,7 @@
                             <img src="img/icons/account.png">
                         </div>
                         <div class="log_basket-link">
-                            <a href="signIn.html.html" class="log-link">Войти</a>
+                            <a href="signIn.html" class="log-link">Войти</a>
                         </div>
                     </div>
                     <div class="bascet, main">
@@ -314,7 +314,7 @@
     countOnLoad();
     insertCountGoods();
     function gotoNovently(){
-        window.location.href = "http://localhost:8080/catalog.html?is_new=1"
+        window.location.href = `${location.protocol}//${location.hostname}:8080/catalog.html?is_new=1`
     }
 </script>
 </body>

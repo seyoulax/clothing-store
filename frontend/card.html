@@ -170,7 +170,7 @@
         countOnLoad();
         insertCountGoods();
         console.log(GET("id"))
-        let datajson = requestToData('http://localhost:8090/app/get?id=' + GET('id'));
+        let datajson = requestToData(`${location.protocol}//${location.hostname}:8090/app/get?id=${GET('id')}`);
         let data = JSON.parse(datajson);
         let sizes = JSON.parse(data[0].sizes);
         console.log(sizes[1])

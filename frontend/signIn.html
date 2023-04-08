@@ -66,7 +66,7 @@
             }
             let jsonData = JSON.stringify(data);
             let xhr = new XMLHttpRequest();
-            xhr.open("POST", 'http://localhost:8090/app/signin' ,false);
+            xhr.open("POST", `${location.protocol}//${location.hostname}:8090/app/signin` ,false);
             xhr.send(jsonData);
             console.log(xhr.responseText)
             let responseData = JSON.parse(xhr.responseText);
@@ -76,7 +76,7 @@
             if(responseData.status == true) {
                 //записываем куку 
                 document.cookie = "user_id=" + responseData.token;
-                window.location.href = "http://localhost:8080/welcome-page.html"
+                window.location.href = `${location.protocol}//${location.hostname}:8080/welcome-page.html`
             }
             if(responseData.status == false){
                 document.querySelector(".form-err").innerHTML = "пользователя с таким логином/почтой или паролем не существует, попробуйте еще раз или зарегистрируйте аккаунт"

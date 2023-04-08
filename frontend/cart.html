@@ -47,7 +47,7 @@
                             <img src="img/icons/account.png">
                         </div>
                         <div class="log_basket-link">
-                            <a href="signIn.html.html" class="log-link">Войти</a>
+                            <a href="signIn.html" class="log-link">Войти</a>
                         </div>
                     </div>
                     <div class="bascet, main">
@@ -113,9 +113,9 @@
                     </div>
                     <div>
                         <div class="form-inputs-title">
-                            Адресс
+                            Адрес
                         </div>
-                        <input type="text" placeholder="г.Москва" id="adress">
+                        <input type="text" placeholder="г. Москва" id="adress">
                     </div>
                 </div>
                 <div class="form-button">
@@ -240,7 +240,7 @@
                         Goods: cartData
                     };
                     let xhr = new XMLHttpRequest();
-                    xhr.open("POST", "http://localhost:8090/app/order", false);
+                    xhr.open("POST", `${location.protocol}//${location.hostname}:8090/app/order`, false);
                     xhr.send(JSON.stringify(data))
                     localStorage.setItem('cart', 'undefined');
                     document.getElementById("err-order").innerHTML = "Поздравляем!, ваш заказ в обработке, что бы его посмотреть, перейдите в " + `<a href="user_acc.html">ваш профиль</a>`
@@ -251,7 +251,7 @@
             document.getElementById("err-order").innerHTML = "Войдите или зарегистрируйтесь чтобы сделать заказ"
         }
     }
-    let datajson = requestToData('http://localhost:8090/app/get');
+    let datajson = requestToData(`${location.protocol}//${location.hostname}:8090/app/get`);
     let data = JSON.parse(datajson);
     console.log(data)
     let fields = ['photo', 'title', 'articul', 'price', 'id'];

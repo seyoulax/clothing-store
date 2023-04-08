@@ -161,7 +161,7 @@
     issetToken();
     countOnLoad();
     insertCountGoods();
-    let baseurl = 'http://localhost:8090/app/get?';
+    let baseurl = `${location.protocol}//${location.hostname}:8090/app/get?`;
     if(GET("category_id")){
         baseurl += "category_id=" + GET('category_id') + "&";
     }
