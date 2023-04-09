@@ -2,6 +2,11 @@
 
 <h3 align="center">Classic full-stack clothing-store, was built as a pet-project</h3>
 
+<p align="center">
+    <img src="https://img.shields.io/github/repo-size/seyoulax/clothing-store?style=for-the-badge" />
+</p>
+
+
 #### technologies-stack:
 
 <ul>
