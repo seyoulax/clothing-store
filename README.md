@@ -33,3 +33,16 @@
 </li>
 
 </ul>
+
+#### Assembly instructions: 
+
+######   1. Go into console towards your project
+######   2. Write these commands -->
+``` 
+  sudo docker-compose build
+  sudo docker-compose up
+```
+######   3. Open your browser with url - ```http://localhost:8080/welcome-page.html```
+######   4. Research the application ✅
+
+<h2 align="center">Thank you for reading!!!</h2>
